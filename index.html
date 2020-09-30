@@ -64,9 +64,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
+                        <h5>$ <span id="subTotal">1278</span></h5>
                         <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$ <span id="lastTotal">1278</span></h5>
                      </div>
                   </div>
                </div>
@@ -90,6 +90,12 @@
 
          const actualPhonePrice = getPhonePrice('phonePrice');
          changePhonePrice('phonePrice', actualPhonePrice);   
+
+         const subTotalPrice = getPhonePrice('subTotal');
+         changePhonePrice('subTotal', subTotalPrice);
+
+         const lastTotalPrice = getPhonePrice('lastTotal');
+         changePhonePrice('lastTotal', lastTotalPrice);
          
       })
 
@@ -102,8 +108,13 @@
          changePhoneNumbersMinus('phoneNumbers', actualPhoneNumbersMinus);
 
          const actualPhonePriceMinus = getPhonePrice('phonePrice');
-         changePhonePriceMinus('phonePrice', actualPhonePriceMinus); 
+         changePhonePriceMinus('phonePrice', actualPhonePriceMinus);
+
+         const subTotalPriceMinus = getPhonePrice('subTotal');
+         changePhonePriceMinus('subTotal', subTotalPriceMinus);
          
+         const lastTotalPriceMinus = getPhonePrice('lastTotal');
+         changePhonePriceMinus('lastTotal', lastTotalPriceMinus);
       })
 
       //when click on plus button for case
@@ -116,6 +127,12 @@
 
          const actualPhonePrice = getPhonePrice('casePrice');
          changePhonePriceCase('casePrice', actualPhonePrice);
+
+         const subTotalPriceCase = getPhonePrice('subTotal');
+         changePhonePriceCase('subTotal', subTotalPriceCase);
+
+         const lastTotalPriceCase = getPhonePrice('lastTotal');
+         changePhonePriceCase('lastTotal', lastTotalPriceCase);
       })
 
       //when click on minus button for case
@@ -128,6 +145,12 @@
 
          const actualPhonePriceMinus = getPhonePrice('casePrice');
          changeCasePrice('casePrice', actualPhonePriceMinus); 
+
+         const subTotalPriceCaseMinus = getPhonePrice('subTotal');
+         changeCasePrice('subTotal', subTotalPriceCaseMinus);
+
+         const lastTotalPriceCaseMinus = getPhonePrice('lastTotal');
+         changeCasePrice('lastTotal', lastTotalPriceCaseMinus);
       })
 
       function getPhoneNumbers(id){
@@ -153,7 +176,7 @@
       }
 
       function changePhonePrice(id, actualPrice){
-         const totalPrice = actualPrice+1219;
+         const totalPrice = actualPrice + 1219;
          document.getElementById(id).innerText = totalPrice;
       }
 
